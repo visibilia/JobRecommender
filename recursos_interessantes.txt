@@ -1,0 +1,11 @@
+
+
+https://www.researchgate.net/post/How_to_find_semantic_similarity_between_two_documents
+
+https://radimrehurek.com/gensim/tutorial.html
+
+https://gist.github.com/clemsos/7692685
+
+num_features=len(dictionary))
+
+http://graus.co/thesis/string-similarity-with-tfidf-and-python/
