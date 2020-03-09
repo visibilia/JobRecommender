@@ -51,7 +51,7 @@ class RecommendationTF_IDF():
 
     def main(self):
         
-        print("Recommendation using TF_IDF\n")
+        print("Recommendation using TF_IDF")
         
         # Loading preprocessed data
         vagas_ti = pd.read_csv(self.dataPrepFile)
@@ -89,7 +89,7 @@ class RecommendationTF_IDF():
 
         self.recommendationTf_idf(cvs,vagas_ti,vagas_ids,cvs_words,dictionary,tfidf,index)
         
-        print("\nRecommendation using TF_IDF done!")
+        print("Recommendation using TF_IDF done!")
          
         
         

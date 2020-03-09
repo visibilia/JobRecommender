@@ -52,7 +52,7 @@ class RecommendationWord2vecPhrases():
         
     def main(self):    
         
-        print("Recommendation using Embeddings-Phrases \n")
+        print("Recommendation using Embeddings-Phrases")
         
         # Loading preprocessed data
         vagas_ti = pd.read_csv(self.dataPrepFile)
@@ -88,5 +88,5 @@ class RecommendationWord2vecPhrases():
         self.recommendation(cvs, vagas_ti, vagas_ids, num_best, instance_skg, "skg")
         self.recommendation(cvs, vagas_ti, vagas_ids, num_best, instance_cbow, "cbow")
         
-        print("\nRecommendation using Embeddings-Phrases done!")
+        print("Recommendation using Embeddings-Phrases done!")
     

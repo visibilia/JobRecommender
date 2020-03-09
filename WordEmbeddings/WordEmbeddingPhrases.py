@@ -43,7 +43,7 @@ class WordEmbPhrases():
 
     def main(self):
         
-        print("Feature representation step - Word Embeddings-Phrases \n")
+        print("Feature representation step - Word Embeddings-Phrases")
         
         vagas_ti = pd.read_csv(self.dataFile, encoding="utf8")
         print(vagas_ti.shape)
@@ -53,7 +53,7 @@ class WordEmbPhrases():
         self.getWordEmbModel_ngram("skipgram", final_word_sentences)
         self.getWordEmbModel_ngram("cbow", final_word_sentences)
         
-        print("\n Feature representation - Word Embeddings-Phrases done!")
+        print("Feature representation - Word Embeddings-Phrases done!")
 
 # Loading bigram and trigrams
 #bigram = pickle.load(open("WordEmbeddings/vagas_cv.bigram","rb"))

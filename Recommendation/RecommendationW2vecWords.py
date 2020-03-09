@@ -52,7 +52,7 @@ class RecommendationWord2vecWords():
         
     def main(self):    
         
-        print("Recommendation using Embeddings-Words\n")
+        print("Recommendation using Embeddings-Words")
         # Reading cvs data
         cvs = pd.read_csv(self.dataCvsFile)
         cvs = preprocessingCvsWords(cvs, self.out)
@@ -80,7 +80,7 @@ class RecommendationWord2vecWords():
         self.recommendation(cvs,vagas_ti,vagas_ids,num_best,instance_skg, "skg")
         print("Time: %.4f" %(time()-start))
         
-        print("\nRecommendation using Embeddings-Words")
+        print("Recommendation using Embeddings-Words")
 
     
     

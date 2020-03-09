@@ -9,7 +9,7 @@ class Filtering():
         self.out = out
     
     def applyLimiar(self):
-        print("Filtering step \n")
+        print("Filtering step")
         
         vagas = pd.read_csv(self.dataFile, encoding = 'cp1252')
 #        print("Vagas")
@@ -23,4 +23,4 @@ class Filtering():
 
         vagas = vagas.to_csv(self.out + "vagas_ti.csv")
         
-        print("\n Filtering step done!")
+        print("Filtering step done!")
