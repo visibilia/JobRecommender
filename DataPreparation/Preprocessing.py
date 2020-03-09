@@ -44,7 +44,7 @@ def preprocessingCvsPhrases(data, bigram, trigram, out):
     data = data.fillna("")
     data.isnull().any()
 
-    start = time()
+    #start = time()
     punctuation = ["/",",",".",";",":","(",")","-","[","]"]
     data["all"] = data.experiencia.str.cat([data.educacao,data.hab_cmp], sep=' ')
     data["all"] = [word_tokenize(s.lower()) for s in data["all"]]
@@ -52,7 +52,7 @@ def preprocessingCvsPhrases(data, bigram, trigram, out):
     data["all"] = [[w for w in s if w not in punctuation] for s in data["all"]]
     data["all"] = [[w for w in s if not(re.match(r"\d",w))] for s in data["all"]]
     data["all"] = [[w[:-1] if w[-1] in punctuation else w for w in s] for s in data["all"]]
-    print("Elapsed time: %.4f"%(time() - start) )
+    #print("Time: %.4f"%(time() - start) )
     data["all"]  = list(trigram[bigram[data["all"]]])
     
     # Saving preprocessed cvs
