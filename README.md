@@ -1,13 +1,13 @@
 # Job Recommender System
 This repository contains the source code related to the paper intitled "Job Recommendation based on Job Seeker Skills: An Empirical Study" published in the Proceedings of the Text2StoryIR'18 Workshop (Text2Story 2018) , Grenoble, France.
 
-# Framework
+## Framework
 * Automatically extract the skills from the job seeker profiles using a variety of text processing techniques. 
 * Perform the job recommendation using TF-IDF and four different configurations of Word2vec over a dataset of job seeker profiles and job vacancies collected by us. 
 * Experimental evaluation to show the performances of the methods and configurations. 
    - Can be used as a guide to choose the most suitable method and configuration for job recommendation.
 
-# Pipeline
+## Pipeline
 
 * Data collection
 
@@ -24,7 +24,7 @@ Word2vec models, a vector space size of 200 was selected after some initial expe
 
 * Recommendation
   * Job matching: given a certain profile, select a group of the nearest job offers based on the distance to that profile
-  * Ranking: Once retrieved the top "k" job offers for the profile, sort them in descending order based on the inverse of this distance 
+  * Ranking: once retrieved the top "k" job offers for the profile, sort them in descending order based on the inverse of this distance 
 
 * Evaluation
 
