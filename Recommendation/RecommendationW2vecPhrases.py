@@ -80,7 +80,9 @@ class RecommendationWord2vecPhrases():
         #Normalizing word2vec vectors
         model_skill_skg.init_sims(replace=True)
         instance_skg = WmdSimilarity(vagas_skills, model_skill_skg, num_best=num_best)
+        print("Time: %.4f" %(time()-start))
         
+        start = time()
         model_skill_cbow.init_sims(replace=True)
         instance_cbow = WmdSimilarity(vagas_skills, model_skill_cbow, num_best=num_best)
         print("Time: %.4f" %(time()-start))

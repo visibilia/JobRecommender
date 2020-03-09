@@ -67,7 +67,7 @@ def preprocessingCvsPhrases(data, bigram, trigram, out):
 # Preprocessing jobs - Phrases
 def preprocessingJobsPhrases(vagas, bigram, trigram, out):
     
-    start = time()
+    #start = time()
     vagas_ids = vagas["id"].values
     punctuation = ["/",",",".",";",":","(",")","-","[","]"]
     vagas_text = vagas["titulo"].str.cat(vagas["descricao"], sep=" ").values
@@ -77,7 +77,7 @@ def preprocessingJobsPhrases(vagas, bigram, trigram, out):
     vagas_skills = [[w for w in s if not(re.match(r"\d",w))] for s in vagas_skills]
     vagas_skills = [[w[:-1] if w[-1] in punctuation else w for w in s] for s in vagas_skills]
     vagas_skills = list(trigram[bigram[vagas_skills]])
-    print("Elapsed time: %.4f"%(time() - start) )
+    #print("Time: %.4f"%(time() - start) )
     
     # Saving preprocessed job offers 
     f_v = open(out+"preprocessing/vagas_phrases.list",'wb')
@@ -118,7 +118,7 @@ def preprocessingCvsWords(data, out):
 def preprocessingJobsWords(vagas, out):
     
     # Extracting skills from job offers
-    start = time()
+    #start = time()
     vagas_ids = vagas["id"].values
     punctuation = ["/",",",".",";",":","(",")","-","[","]"]
     vagas_text = vagas["titulo"].str.cat(vagas["descricao"], sep=" ").values
@@ -128,7 +128,7 @@ def preprocessingJobsWords(vagas, out):
     #vagas_skills = [[nl.lemma(w) for w in s] for s in vagas_skills]
     vagas_skills = [[w for w in s if not(re.match(r"\d",w))] for s in vagas_skills]
     vagas_skills = [[w[:-1] if w[-1] in punctuation else w for w in s] for s in vagas_skills]
-    print("Elapsed time: %.4f"%(time() - start) )
+    #print("Time: %.4f"%(time() - start) )
 
     # Saving preprocessed vagas 
     f_v = open(out+"preprocessing/vagas_words.list",'wb')
