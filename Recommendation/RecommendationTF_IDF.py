@@ -46,10 +46,12 @@ class RecommendationTF_IDF():
             df_aux["sim"] = pd.Series(aux_sims)
             df_final = pd.concat([df_final,df_aux], axis=0)
         df_final.to_csv(self.out+"recommendations/recomendacoes_finais_tfidf.csv")
-        print("Done!")
+        #print("Done!")
 
 
     def main(self):
+        
+        print("Recommendation using TF_IDF\n")
         
         # Loading preprocessed data
         vagas_ti = pd.read_csv(self.dataPrepFile)
@@ -59,7 +61,7 @@ class RecommendationTF_IDF():
         cvs = pd.read_csv(self.dataCvsFile)
         cvs = cvs.fillna("")
         cvs.isnull().any()
-        print("Loading cvs done!")
+        #print("Loading cvs done!")
 
         # Creating a dictionary 
         dictionary = gcorp.Dictionary(vagas_words)
@@ -86,3 +88,8 @@ class RecommendationTF_IDF():
         index = MatrixSimilarity.load(self.out+'preprocessing/tf_idf/vagas.index')
 
         self.recommendationTf_idf(cvs,vagas_ti,vagas_ids,cvs_words,dictionary,tfidf,index)
+        
+        print("\nRecommendation using TF_IDF done!")
+         
+        
+        

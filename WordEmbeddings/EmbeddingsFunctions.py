@@ -13,7 +13,7 @@ def getSentences(data):
     
     sentences = [sent_tokenize(x.lower()) for x in data["descricao"]] 
     sentences += data["titulo"].str.lower().tolist()
-    print(len(sentences))
+    #print(len(sentences))
     
     return(sentences)
 
@@ -21,7 +21,7 @@ def getSentences(data):
 def getWords(sentences):
      
     word_sentences = [[word_tokenize(w) for w in s] for s in sentences]
-    len(word_sentences)
+    #len(word_sentences)
     final_word_sentences = preprocess_text_phrases(word_sentences)    
     
     return(final_word_sentences)

@@ -16,7 +16,9 @@ class WordEmbWords():
         self.out = out
     
     def getWordEmbModel(self):
-
+        
+        print("Feature representation step - Word Embeddings-Words \n")
+        
         # loading data
         vagas_ti = pd.read_csv(self.dataFile)
 
@@ -39,6 +41,7 @@ class WordEmbWords():
         model_skill.save(self.out+"wordEmbeddings/ti_skill_w2v_cbow_200.model")
         print("It took: %.4f"%(time()-start))
         
+        print("\n Feature representation - Word Embeddings-Words done!")
 
 
 

@@ -59,7 +59,7 @@ def preprocessingCvsPhrases(data, bigram, trigram, out):
     f = open(out+"preprocessing/cvs_phrases.series",'wb')
     cvs_phrases = data["all"]
     pickle.dump(cvs_phrases,f)
-    print("CVs saved!")
+    #print("CVs saved!")
     
     return data
 
@@ -84,7 +84,7 @@ def preprocessingJobsPhrases(vagas, bigram, trigram, out):
     f_iv = open(out+"preprocessing/vagas_phrases_ids.array",'wb')
     pickle.dump(vagas_skills,f_v)
     pickle.dump(vagas_ids,f_iv)
-    print("Vagas saved!")
+    #print("Vagas saved!")
 
     
     return vagas_skills, vagas_ids
@@ -110,7 +110,7 @@ def preprocessingCvsWords(data, out):
     f = open(out+"preprocessing/cvs_words.series",'wb')
     cvs_words = data["all"]
     pickle.dump(cvs_words,f)
-    print("CVs saved!")
+    #print("CVs saved!")
     
     return data
 
@@ -135,7 +135,7 @@ def preprocessingJobsWords(vagas, out):
     f_iv = open(out+"preprocessing/vagas_ids.array",'wb')
     pickle.dump(vagas_skills,f_v)
     pickle.dump(vagas_ids,f_iv)
-    print("Vagas saved!")
+    #print("Vagas saved!")
 
     return vagas_skills, vagas_ids
 

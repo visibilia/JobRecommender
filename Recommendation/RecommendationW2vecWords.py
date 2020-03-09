@@ -51,6 +51,8 @@ class RecommendationWord2vecWords():
     
         
     def main(self):    
+        
+        print("Recommendation using Embeddings-Words\n")
         # Reading cvs data
         cvs = pd.read_csv(self.dataCvsFile)
         cvs = preprocessingCvsWords(cvs, self.out)
@@ -77,7 +79,8 @@ class RecommendationWord2vecWords():
         instance_skg = WmdSimilarity(vagas_skills, model_skill_skg, num_best=10) # Using similarity framework for Word Mover's Distance (WMD)
         self.recommendation(cvs,vagas_ti,vagas_ids,num_best,instance_skg, "skg")
         print("Time: %.4f" %(time()-start))
-
+        
+        print("\nRecommendation using Embeddings-Words")
 
     
     

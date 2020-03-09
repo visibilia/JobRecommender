@@ -21,7 +21,7 @@ class RecommendationWord2vecPhrases():
         
     # Generating recommendations skip-gram
     def recommendation(self,cvs,vagas_ti,vagas_ids,num_best, instance, model):
-    
+        
         df_final = pd.DataFrame(columns=["exp","edu","hab","v_tit","v_desc","sim"])
         for j in tqdm(range(self.n)):
             df_aux = pd.DataFrame()
@@ -51,6 +51,9 @@ class RecommendationWord2vecPhrases():
         
         
     def main(self):    
+        
+        print("Recommendation using Embeddings-Phrases \n")
+        
         # Loading preprocessed data
         vagas_ti = pd.read_csv(self.dataPrepFile)
         
@@ -84,5 +87,6 @@ class RecommendationWord2vecPhrases():
         
         self.recommendation(cvs, vagas_ti, vagas_ids, num_best, instance_skg, "skg")
         self.recommendation(cvs, vagas_ti, vagas_ids, num_best, instance_cbow, "cbow")
-
+        
+        print("\nRecommendation using Embeddings-Phrases done!")
     
