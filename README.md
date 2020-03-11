@@ -36,3 +36,7 @@ Argument definitions on Beenet.py
 Pipeline difinition on Beenet.py
 
 ![Pipeline](/images/pipeline.png)
+
+## Screenshot of execution
+
+![Execution](/images/beenetExe.png)
